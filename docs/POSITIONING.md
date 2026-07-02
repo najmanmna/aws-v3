@@ -28,6 +28,8 @@ The insight underneath this: most agencies are good at *either* design *or* deve
 
 This single insight is the real differentiator — not speed, not price, not a longer feature list. Every other positioning claim on the site should be a specific expression of this one idea, not a parallel, competing claim.
 
+This claim extends to *range*, not just fidelity: proving we can execute a precise, geometric brief exactly as specified is only half the argument — the site's own hand-marked details (`DESIGN_SYSTEM.md` §12) exist to demonstrate we can build a looser, hand-crafted, imperfect-on-purpose brief just as convincingly. The same studio, either way.
+
 ## 3. Value proposition, by audience
 
 Reference `PRD.md` §4 for full audience detail. The core promise adapts in emphasis, not in substance:

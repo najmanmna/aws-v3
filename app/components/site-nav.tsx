@@ -18,12 +18,12 @@ export function SiteNav() {
           width={200}
           height={200}
           priority
-          className="h-14 w-14 sm:h-16 sm:w-16 lg:h-18 lg:w-18"
+          className="h-20 w-20 sm:h-24 sm:w-24 lg:h-28 lg:w-28"
         />
       </Link>
 
       <nav aria-label="Primary">
-        <ul className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1 text-sm tracking-wide text-foreground sm:gap-x-8">
+        <ul className="flex flex-wrap items-center justify-end gap-x-6 gap-y-2 text-base font-medium tracking-wide text-foreground sm:gap-x-10 sm:text-lg">
           {navLinks.map((link) => (
             <li key={link.href}>
               <Link href={link.href} className="transition-opacity hover:opacity-70">

@@ -13,6 +13,8 @@
   --color-accent: var(--accent);
   --color-accent-deep: var(--accent-deep);
   --font-sans: var(--font-general-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-handwritten: var(--font-caveat), cursive;
+  --font-marked: var(--font-patrick-hand), var(--font-general-sans), sans-serif;
 }
 
 body {
@@ -34,19 +36,28 @@ body::before {
   background-size: 180px 180px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  @keyframes fade-up {
-    from {
-      opacity: 0;
-      transform: translateY(14px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+/*
+ * Reduced motion (docs/DESIGN_SYSTEM.md §6/§8 — hard requirement, not polish).
+ * The hero's entrance sequence is built with Framer Motion. Rather than branching
+ * React's render output on `useReducedMotion()` (which reads `window.matchMedia` and
+ * is unavailable during SSR, causing a hydration mismatch between server and client),
+ * every animated element carries a stable class name and the browser resolves this
+ * media query before first paint — no JS timing race, no flash, no mismatch.
+ * This forces every hero entrance animation to its resting state instantly.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .motion-reveal {
+    opacity: 1 !important;
+    transform: none !important;
   }
 
-  .animate-fade-up {
-    animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  .motion-reveal-clip {
+    clip-path: inset(0 -10% 0 -10%) !important;
+  }
+
+  .motion-reveal-path {
+    opacity: 0.75 !important;
+    stroke-dasharray: 1 1 !important;
+    stroke-dashoffset: 0 !important;
   }
 }
