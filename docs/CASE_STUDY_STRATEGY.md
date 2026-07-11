@@ -12,14 +12,16 @@ A boutique studio with twelve "featured" projects contradicts its own positionin
 
 The instinct to feature the technically hardest project is wrong for this brand. Rank by how well a project **proves the positioning** (execution fidelity to a strong design, a real business outcome, a clear before/after) — not by feature complexity or the client's brand recognition.
 
-Current working shortlist, ranked (to be confirmed/reordered once each project's story is actually drafted — this is a starting hypothesis, not a locked decision):
+Confirmed set for the Home showcase (2026-07-02), built with real screenshots as implementation placeholders while final case-study photography/copy is produced — layout and order still open to revision once each project's full story is drafted:
 
-1. Harley Lounge
-2. ELDA
-3. Arkmurus
-4. 10QRX
+1. ELDA (elda.lk) — heritage block-print textiles
+2. The Balanced Pantry (thebalancedpantry.lk) — curated wellness products
+3. Elvyn (elvynstore.com) — premium leather goods
+4. Hedone (hedoneskincare.com) — natural skincare
 
-Before locking this order, stress-test each candidate against §3 below — a project that's technically impressive but has a weak "story" (unclear challenge, no measurable outcome, no strong imagery) should rank below a simpler project that tells a complete, convincing story.
+Arkmurus was considered and deliberately excluded — its live site reads as a generic corporate template (stock photography, icon-feature grid, gradient text, an intrusive chat widget), which fails the "featured" bar in §3 below and would sit as a tonal outlier against the other three lifestyle/craft brands. Hedone was chosen in its place for both craft quality and curatorial fit.
+
+Before locking final order, stress-test each candidate against §3 below — a project that's technically impressive but has a weak "story" (unclear challenge, no measurable outcome, no strong imagery) should rank below a simpler project that tells a complete, convincing story.
 
 ## 3. What makes a project "featured"
 
