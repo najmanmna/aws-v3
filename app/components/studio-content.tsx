@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { HandMarkUnderline } from "@/app/components/hand-mark-underline";
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -23,23 +25,23 @@ const beliefs = [
 const principles = [
   {
     name: "We don’t approximate",
-    description: "If a spacing value, an easing curve, or a line height was considered in the design, it survives into the browser unchanged. Close enough is a decision to ship something worse than what was designed, and not one we make quietly.",
+    description: "If it was considered in the design, from spacing to easing curves to line height, it survives into the browser unchanged, because close enough means shipping something worse.",
   },
   {
     name: "We preserve intent, not just pixels",
-    description: "When we execute someone else’s design, our job is to protect what they meant. Especially in the situations the original file never anticipated: a longer headline, a missing image, a screen size nobody mocked up.",
+    description: "When we execute someone else’s design, our job is to protect what they meant, especially in the situations the original file never anticipated: a longer headline, a missing image, a screen size nobody mocked up.",
   },
   {
     name: "We obsess over the details nobody asked about",
-    description: "The hover state on the fourth footer link. How a heading wraps on a tablet. The alt text on the sixth case-study image. This is the part a client actually lives with for years, long after the exciting part of the brief is forgotten.",
+    description: "The hover state on the fourth footer link, how a heading wraps on a tablet, the alt text on the sixth case-study image: the part a client actually lives with for years, long after the exciting part of the brief is forgotten.",
   },
   {
     name: "We don’t compete with the client’s brand",
-    description: "Our win condition is never “look what we built.” It’s whether a visitor notices the business behind the site, and nothing else.",
+    description: "Our win condition is never “look what we built,” it’s whether a visitor notices the business behind the site, and nothing else.",
   },
   {
     name: "We build for longevity, not a launch screenshot",
-    description: "A layout that only works for the exact words and images in the mockup is a photo of a website, not a finished one. Everything we build has to survive real content, future edits, and years of use.",
+    description: "Everything we build has to survive real content, future edits, and years of use, not just the exact words and images that happened to be in the mockup.",
   },
 ];
 
@@ -116,7 +118,8 @@ export function StudioContent() {
               transition={{ duration: 1, ease }}
               className="max-w-3xl text-pretty text-[clamp(2rem,4.5vw,4rem)] font-medium leading-[1.1] tracking-tight text-foreground"
             >
-              Nothing is finished until it survives the browser.
+              Nothing is finished until it{" "}
+              <HandMarkUnderline>survives the browser</HandMarkUnderline>.
             </motion.p>
 
             <div className="mt-16 flex flex-col sm:mt-24">
@@ -185,7 +188,7 @@ export function StudioContent() {
                 key={item}
                 className="text-[clamp(1.5rem,3vw,2.5rem)] font-medium leading-[1.2] tracking-tight text-foreground"
               >
-                We don't do {item.toLowerCase()}
+                We don’t do {item.toLowerCase()}
               </h3>
             ))}
           </motion.div>
@@ -203,10 +206,14 @@ export function StudioContent() {
               transition={{ duration: 0.8, ease }}
               className="lg:col-span-4"
             >
-              <div className="relative aspect-[3/4] w-full overflow-hidden bg-foreground/5 grayscale filter transition-all duration-700 hover:grayscale-0">
-                <div className="absolute inset-0 flex items-center justify-center text-xs font-bold uppercase tracking-widest text-foreground/20">
-                  Portrait
-                </div>
+              <div className="relative aspect-[3/4] w-full max-w-60 overflow-hidden bg-foreground/5 grayscale filter transition-all duration-700 hover:grayscale-0 sm:max-w-xs lg:max-w-none">
+                <Image
+                  src="/najman-portrait.jpg"
+                  alt="Najman, founder of Ahamed Web Studio"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 33vw, 240px"
+                />
               </div>
             </motion.div>
 

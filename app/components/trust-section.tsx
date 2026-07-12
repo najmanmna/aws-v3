@@ -12,7 +12,7 @@ const featured = {
 const supporting = [
   {
     quote:
-      "For the first time someone nailed it and that's you! He had done the website up to international level. Worth every penny.",
+      "My jaw was literally dropped, he had done the website up to international level. Worth every penny.",
     name: "Uthpala Pathirana",
     role: "Founder, Hedone Skincare",
     reviewUrl: "#", 

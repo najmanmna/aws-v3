@@ -3,6 +3,12 @@ export type CraftPoint = {
   description: string;
 };
 
+export type Testimonial = {
+  quote: string;
+  name: string;
+  role: string;
+};
+
 export type CaseStudy = {
   slug: string;
   name: string;
@@ -22,6 +28,7 @@ export type CaseStudy = {
   craft: CraftPoint[];
   obsessedOver: string;
   outcome: string;
+  testimonial: Testimonial;
   gallery: string[];
   nextSlug: string;
 };
@@ -72,6 +79,12 @@ export const caseStudies: CaseStudy[] = [
       "The hover state on each fabric swatch reveals a tighter, second crop of the weave, a small detail that helps translate texture through a screen.",
     outcome:
       "ELDA now has a shopping experience that matches the quality of what they make: easy for the team to manage, and considered enough to hold its own next to the craft in every product photo.",
+    testimonial: {
+      quote:
+        "He really took the time to understand what I wanted. I loved how he did his own research and came up with something so visually attractive and well thought out.",
+      name: "Ambrin Uwais",
+      role: "Ambrins Fabrics",
+    },
     gallery: ["/work/elda.png", "/work/elda-shop.png", "/work/elda-about.png"],
     nextSlug: "the-balanced-pantry",
   },
@@ -119,6 +132,12 @@ export const caseStudies: CaseStudy[] = [
       "The three serving-idea cards below the product, Snack It Solo, The Breakfast Upgrade, and Bake & Blend, exist so a single flavor still gives a first-time visitor several reasons to add it to cart.",
     outcome:
       "The Balanced Pantry launched with one product, tiered pricing that scales from a single pack to bulk wholesale, and a shop that already reads as a brand with a future, not a placeholder waiting for more inventory.",
+    testimonial: {
+      quote:
+        "Such a smooth and pleasant experience. He took the time to understand what I wanted and came up with something so visually attractive and well thought out.",
+      name: "Ambrin Uwais",
+      role: "The Balanced Pantry",
+    },
     gallery: [
       "/work/thebalancedpantry.png",
       "/work/thebalancedpantry-shop.png",
@@ -170,6 +189,12 @@ export const caseStudies: CaseStudy[] = [
       "Colour swatches on each product page show a real second photograph of the bag in that colourway, instead of an abstract colour dot, so a shopper never has to guess what \"Misty Blue\" actually looks like.",
     outcome:
       "Elvyn now sells a full range, from slings to wallets, through a store that carries the same understated confidence as the product photography, with installment pricing and true-to-life colour variants that make browsing dozens of bags feel considered instead of overwhelming.",
+    testimonial: {
+      quote:
+        "Ahamed did an excellent job crafting the website exactly to our expectations. He’s very responsive, detail-oriented, and fully committed to delivering on time without compromising quality.",
+      name: "Sajid Ifham",
+      role: "Elvyn",
+    },
     gallery: ["/work/elvynstore.png", "/work/elvyn-shop.png", "/work/elvyn-product.png"],
     nextSlug: "hedone",
   },
@@ -217,6 +242,12 @@ export const caseStudies: CaseStudy[] = [
       "Each headline holds exactly one italicised word, \"honesty\" among others, a single restrained accent that carries the brand's warmth without ever tipping into decoration.",
     outcome:
       "Hedone now has one considered site that carries eight products across face, body, and therapy, and lets real certifications and the founder's own words build trust, instead of a wall of logos doing it for her.",
+    testimonial: {
+      quote:
+        "My jaw was literally dropped, he had done the website up to international level. Worth every penny, and you won’t regret it.",
+      name: "Uthpala Pathirana",
+      role: "Hedone Skincare",
+    },
     gallery: ["/work/hedoneskincare.png", "/work/hedone-collection.png", "/work/hedone-detail.png"],
     nextSlug: "elda",
   },

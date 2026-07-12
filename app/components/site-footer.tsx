@@ -8,9 +8,8 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { href: "#", label: "LinkedIn" },
-  { href: "#", label: "Instagram" },
-  { href: "#", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/najman-nizam/", label: "LinkedIn" },
+  { href: "https://github.com/najmanmna", label: "GitHub" },
 ];
 
 export function SiteFooter() {

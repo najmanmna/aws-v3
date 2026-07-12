@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { SiteNav } from "@/app/components/site-nav";
 import { caseStudies, getCaseStudy } from "@/app/lib/case-studies";
+import { pageMetadata } from "@/app/lib/metadata";
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -17,10 +18,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const study = getCaseStudy(slug);
   if (!study) return {};
-  return {
-    title: `${study.name} · Ahamed Web Studio`,
+  return pageMetadata({
+    title: study.name,
     description: study.tagline,
-  };
+    path: `/work/${study.slug}`,
+  });
 }
 
 export default async function CaseStudyPage({
@@ -201,6 +203,25 @@ export default async function CaseStudyPage({
               <p className="max-w-2xl text-xl leading-relaxed text-foreground/80 md:col-span-8 md:col-start-5 sm:text-2xl">
                 {study.outcome}
               </p>
+            </div>
+          </section>
+
+          {/* Testimonial */}
+          <section className="border-t border-foreground/10 py-20 sm:py-28">
+            <div className="mx-auto max-w-3xl text-center">
+              <blockquote className="text-pretty text-2xl font-medium leading-[1.3] tracking-tight text-foreground sm:text-3xl">
+                <span className="text-foreground/30">&ldquo;</span>
+                {study.testimonial.quote}
+                <span className="text-foreground/30">&rdquo;</span>
+              </blockquote>
+              <figcaption className="mt-8 flex flex-col items-center gap-1">
+                <span className="text-sm font-bold uppercase tracking-[0.15em] text-foreground">
+                  {study.testimonial.name}
+                </span>
+                <span className="text-sm font-medium text-foreground/50">
+                  {study.testimonial.role}
+                </span>
+              </figcaption>
             </div>
           </section>
 

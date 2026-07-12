@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -26,14 +27,14 @@ export function AboutSection() {
             className="lg:col-span-4"
           >
             {/* A stark, 3:4 aspect ratio portrait slot */}
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-foreground/5 grayscale filter transition-all duration-700 hover:grayscale-0">
-              {/* 
-                Replace with a high-end, black-and-white or muted portrait.
-                <Image src="/najman-portrait.jpg" alt="Najman, Founder of AWS" fill className="object-cover" /> 
-              */}
-              <div className="absolute inset-0 flex items-center justify-center text-xs font-bold uppercase tracking-widest text-foreground/20">
-                Portrait
-              </div>
+            <div className="relative aspect-[3/4] w-full max-w-60 overflow-hidden bg-foreground/5 grayscale filter transition-all duration-700 hover:grayscale-0 sm:max-w-xs lg:max-w-none">
+              <Image
+                src="/najman-portrait.jpg"
+                alt="Najman, founder of Ahamed Web Studio"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 33vw, 240px"
+              />
             </div>
           </motion.div>
 

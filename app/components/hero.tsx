@@ -25,16 +25,16 @@ export function Hero() {
             initial={{ opacity: 0, x: 80 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: slideEase }}
-            className="mt-4 self-end font-medium tracking-[-0.04em] text-foreground/50 sm:mt-6"
+            className="mt-4 self-start font-medium tracking-[-0.04em] text-foreground/50 sm:mt-6 sm:self-end"
           >
             deserves a website
           </motion.span>
 
           <motion.span
-            initial={{ clipPath: "inset(0 100% 0 0)", opacity: 0 }}
-            animate={{ clipPath: "inset(0 -10% 0 -10%)", opacity: 1 }}
+            initial={{ clipPath: "inset(-20% 100% -20% -10%)", opacity: 0 }}
+            animate={{ clipPath: "inset(-20% -10% -20% -10%)", opacity: 1 }}
             transition={{ duration: 1, delay: 0.8, ease: slideEase }}
-            className="mt-8 self-start font-bold tracking-[-0.05em] sm:mt-12"
+            className="mt-6 self-start font-bold tracking-[-0.05em] sm:mt-12"
           >
             that lives up to it
             {/* The Brand Anchor: A massive, deliberate dot of your brand orange */}
@@ -44,7 +44,7 @@ export function Hero() {
         </h1>
       </div>
 
-      <div className="grid w-full grid-cols-1 items-end gap-12 border-t border-foreground/10 pt-8 md:grid-cols-12 md:gap-8">
+      <div className="grid w-full grid-cols-1 items-end gap-8 border-t border-foreground/10 pt-8 md:grid-cols-12">
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}

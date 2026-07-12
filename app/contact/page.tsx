@@ -1,11 +1,13 @@
-import type { Metadata } from "next";
 import { SiteNav } from "@/app/components/site-nav";
 import { ContactForm } from "@/app/components/contact-form";
+import { pageMetadata } from "@/app/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Contact · Ahamed Web Studio",
-  description: "Tell us about your project.",
-};
+export const metadata = pageMetadata({
+  title: "Contact",
+  description:
+    "Tell us about your project. Whether you're an agency or a founder, Najman reads every message personally.",
+  path: "/contact",
+});
 
 export default function ContactPage() {
   return (
@@ -79,9 +81,22 @@ export default function ContactPage() {
                     Social
                   </h3>
                   <div className="flex flex-col items-start gap-2">
-                    {/* Add real links here */}
-                    <a href="#" className="text-lg font-medium text-foreground transition-colors hover:text-foreground/70">LinkedIn</a>
-                    <a href="#" className="text-lg font-medium text-foreground transition-colors hover:text-foreground/70">Instagram</a>
+                    <a
+                      href="https://www.linkedin.com/in/najman-nizam/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-medium text-foreground transition-colors hover:text-foreground/70"
+                    >
+                      LinkedIn
+                    </a>
+                    <a
+                      href="https://github.com/najmanmna"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-lg font-medium text-foreground transition-colors hover:text-foreground/70"
+                    >
+                      GitHub
+                    </a>
                   </div>
                 </div>
 
