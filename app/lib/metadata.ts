@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const SITE_NAME = "Ahamed Web Studio";
-export const SITE_URL = "https://ahamedwebstudio.com";
+export const SITE_URL = "https://www.ahamedwebstudio.com";
 export const SITE_DESCRIPTION =
   "A boutique studio that partners with branding agencies and ambitious businesses to design and build premium websites.";
 
